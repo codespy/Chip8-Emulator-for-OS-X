@@ -12,6 +12,9 @@
 		142FCFE51ABF6DFE00A83FBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142FCFE41ABF6DFE00A83FBF /* Images.xcassets */; };
 		142FCFE81ABF6DFF00A83FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142FCFE61ABF6DFF00A83FBF /* Main.storyboard */; };
 		142FCFF41ABF6DFF00A83FBF /* Chip8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142FCFF31ABF6DFF00A83FBF /* Chip8Tests.swift */; };
+		142FCFFE1ABF6E1900A83FBF /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142FCFFD1ABF6E1900A83FBF /* CPU.swift */; };
+		1442E03E1ACDD3C500ACC289 /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1442E03D1ACDD3C500ACC289 /* ScreenView.swift */; };
+		14510AF61AE2E90600AA931F /* beep-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 14510AF51AE2E90600AA931F /* beep-02.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 		142FCFED1ABF6DFF00A83FBF /* Chip8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chip8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		142FCFF21ABF6DFF00A83FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		142FCFF31ABF6DFF00A83FBF /* Chip8Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip8Tests.swift; sourceTree = "<group>"; };
+		142FCFFD1ABF6E1900A83FBF /* CPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
+		1442E03D1ACDD3C500ACC289 /* ScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
+		14510AF51AE2E90600AA931F /* beep-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-02.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,8 @@
 				142FCFE41ABF6DFE00A83FBF /* Images.xcassets */,
 				142FCFE61ABF6DFF00A83FBF /* Main.storyboard */,
 				142FCFDE1ABF6DFE00A83FBF /* Supporting Files */,
+				142FCFFD1ABF6E1900A83FBF /* CPU.swift */,
+				1442E03D1ACDD3C500ACC289 /* ScreenView.swift */,
 			);
 			path = Chip8;
 			sourceTree = "<group>";
@@ -87,6 +95,7 @@
 		142FCFDE1ABF6DFE00A83FBF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14510AF51AE2E90600AA931F /* beep-02.wav */,
 				142FCFDF1ABF6DFE00A83FBF /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -190,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				142FCFE51ABF6DFE00A83FBF /* Images.xcassets in Resources */,
+				14510AF61AE2E90600AA931F /* beep-02.wav in Resources */,
 				142FCFE81ABF6DFF00A83FBF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +220,8 @@
 			files = (
 				142FCFE31ABF6DFE00A83FBF /* ViewController.swift in Sources */,
 				142FCFE11ABF6DFE00A83FBF /* AppDelegate.swift in Sources */,
+				142FCFFE1ABF6E1900A83FBF /* CPU.swift in Sources */,
+				1442E03E1ACDD3C500ACC289 /* ScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +331,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -400,6 +413,7 @@
 				142FCFF91ABF6DFF00A83FBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		142FCFFA1ABF6DFF00A83FBF /* Build configuration list for PBXNativeTarget "Chip8Tests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +422,7 @@
 				142FCFFC1ABF6DFF00A83FBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
