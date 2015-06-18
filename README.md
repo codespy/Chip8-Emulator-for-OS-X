@@ -10,7 +10,7 @@ It was made to allow video games to be more easily programmed for said computers
 
 
 See video on youtube.com:<br />
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/nPiBMn3imHo/0.jpg)](http://www.youtube.com/watch?v=YnPiBMn3imHo)
+[![CHIP-8 on youtube](http://img.youtube.com/vi/nPiBMn3imHo/0.jpg)](https://www.youtube.com/watch?v=nPiBMn3imHo)
 
 ![chip8 swift](https://cloud.githubusercontent.com/assets/894072/8219265/2158b6f8-1549-11e5-9142-4a7a589c8eda.png)
 ![chip8 zero](https://cloud.githubusercontent.com/assets/894072/8219315/6ca5477a-1549-11e5-9317-d191bd32e30b.png)
