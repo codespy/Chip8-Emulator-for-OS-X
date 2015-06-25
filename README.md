@@ -1,5 +1,5 @@
 # Chip8-Emulator-for-OS-X
-Chip8 Emulator for OSX Written in pure Swift 1.2
+Chip8 Emulator for OSX Written in pure Swift 2.0 (tested with XCode 7 beta 2)
 
 
 
