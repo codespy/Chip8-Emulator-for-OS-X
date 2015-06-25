@@ -55,7 +55,7 @@ class ViewController: NSViewController, CPUProtocol {
     func startCPU() {
 
         if (filePath.isEmpty) {
-            println("no program")
+            print("no program")
         } else {
             self.cpu = CPU()
 
@@ -108,7 +108,7 @@ class ViewController: NSViewController, CPUProtocol {
     }
 
     @IBAction func onLoad(sender: AnyObject) {
-        var openPanel = NSOpenPanel()
+        let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = false
@@ -119,18 +119,18 @@ class ViewController: NSViewController, CPUProtocol {
                 //Do what you will
                 //If there's only one URL, surely 'openPanel.URL'
                 //but otherwise a for loop works
-                println(result)
+                print(result)
                 
-                var rootPath : NSURL? = openPanel.URL
+                let rootPath : NSURL? = openPanel.URL
                 if let url = rootPath {
-                    println(url)
-                    println(url.path)
+                    print(url)
+                    print(url.path)
                     
                     if let value = url.path {
                         self.filePath = value
                         
                         self.filePath = value
-                        if let extenstion = url.pathExtension {
+                        if let _ = url.pathExtension {
                             self.programPath.stringValue = self.filePath
                         }
                         
@@ -161,7 +161,7 @@ class ViewController: NSViewController, CPUProtocol {
                 cpu.stopRuning()
             }
 
-            println("canceled = \(th.cancelled)")
+            print("canceled = \(th.cancelled)")
         }
 
         //start thread with cpu emulator

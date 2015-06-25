@@ -126,13 +126,13 @@ class CPU : NSObject {
     }
 
     func startProgram() {
-        println("START program")
+        print("START program")
         stop = false
         // start program
         PC = 0x200
 
         var next : Bool
-        do {
+        repeat {
             if self.stop {
                 return
             }
@@ -155,7 +155,7 @@ class CPU : NSObject {
             }
         } while (next)
         
-        println("END")
+        print("END")
     }
 
     
@@ -378,17 +378,17 @@ class CPU : NSObject {
           //println("I = \(I)")
           let nPixels : Int = Int((optocode & 0x000F))
           for var yline=0; yline<nPixels; yline++ {
-            var index = Int(I + UInt16(yline))
-            var pixel = memory[index]
+            let index = Int(I + UInt16(yline))
+            let pixel = memory[index]
             
             for var xline=0; xline<8; xline++ {
                 
                 if (pixel & UInt8(0x80 >> xline)) != 0 {
-                    var VX = Int(V[X])
-                    var VY = Int(V[Y])
+                    let VX = Int(V[X])
+                    let VY = Int(V[Y])
 
-                    var pixelX = Int(VX) + xline
-                    var pixelY = Int(VY) + yline
+                    let pixelX = Int(VX) + xline
+                    let pixelY = Int(VY) + yline
 
 //                    if (pixelX >= 64) {
 //                        pixelX -= 64;
@@ -405,7 +405,7 @@ class CPU : NSObject {
 //                    }
 
                     //var pixelIndex = Int(x) + xline  + Int(y + yline) * 64
-                    var pixelIndex = pixelX  + pixelY * 64
+                    let pixelIndex = pixelX  + pixelY * 64
 
                     //println("  VX=\(VX), YX = \(VY) pixelX=\(pixelX) pixelY=\(pixelY)")
 
@@ -429,7 +429,7 @@ class CPU : NSObject {
             switch optocode & 0x00FF {
                 
                 case 0x009E: // EX9E Skips the next instruction if the key stored in VX is pressed.
-                    var keyIndex = Int(V[X])
+                    let keyIndex = Int(V[X])
                     if keys[keyIndex] == 1 {
                         PC += 4
                     } else {
@@ -437,7 +437,7 @@ class CPU : NSObject {
                     }
                     
                 case 0x00A1: // EXA1 Skips the next instruction if the key stored in VX isn't pressed.
-                    var keyIndex = Int(V[X])
+                    let keyIndex = Int(V[X])
                     if keys[keyIndex] == 0 {
                         PC += 4
                     } else {
@@ -474,7 +474,7 @@ class CPU : NSObject {
                 PC += 2
                 
             case 0x001E: // FX1E Adds VX to I. set VF if buffer overflow
-                var result = Int(I) + Int(V[X])
+                let result = Int(I) + Int(V[X])
                 
                 if result > 0xFFF{
                     V[0xF] = 1
@@ -542,13 +542,13 @@ class CPU : NSObject {
         return true
     }
     
-    func unknownOptocode(var optocode: UInt16) {
+    func unknownOptocode(let optocode: UInt16) {
         let optocodeInHex = String(optocode, radix: 16)
-        println("UNKNOWN OPTOCODE: \(optocodeInHex)")
+        print("UNKNOWN OPTOCODE: \(optocodeInHex)")
     }
     
     func clearsTheScreen(){
-        println("clearsTheScreen")
+        print("clearsTheScreen")
 
         for var i=0; i<screen.count; i++ {
             screen[i] = 0

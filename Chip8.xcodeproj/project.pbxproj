@@ -162,6 +162,7 @@
 		142FCFD31ABF6DFE00A83FBF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = codespy;
 				TargetAttributes = {

@@ -56,7 +56,7 @@ class ScreenView: NSView {
 
         
 
-        var bacgroundRect: NSRect = NSMakeRect(CGFloat(leftMarginPx),
+        let bacgroundRect: NSRect = NSMakeRect(CGFloat(leftMarginPx),
             CGFloat(bottomMarginPx),
             CGFloat(SCREEN_WIDTH),
             CGFloat(SCREEN_HEIGHT))
@@ -98,7 +98,8 @@ class ScreenView: NSView {
 
         let textRect: NSRect = NSMakeRect(5, 3, 125, 18)
         let textStyle = NSMutableParagraphStyle()
-        textStyle.alignment = NSTextAlignment.LeftTextAlignment
+        //textStyle.alignment = NSTextAlignment.LeftTextAlignment
+        textStyle.alignment = NSTextAlignment.Left
         textStyle.firstLineHeadIndent = 15.0
         textStyle.paragraphSpacingBefore = 10.0
 
@@ -184,71 +185,71 @@ class ScreenView: NSView {
 
         switch keyCode {
         case 18: // 1
-            println("1")
+            print("1")
             keys[1] = value
 
         case 19: // 2
-            println("2")
+            print("2")
             keys[2] = value
 
         case 20: // 3
-            println("3")
+            print("3")
             keys[3] = value
 
         case 21: // 4
-            println("4")
+            print("4")
             keys[0xC] = value
             
         case 12: // q
-            println("q")
+            print("q")
             keys[4] = value
 
         case 13: // w
-            println("w")
+            print("w")
             keys[5] = value
 
         case 14: // e
-            println("e")
+            print("e")
             keys[6] = value
             
         case 15: // r
-            println("r")
+            print("r")
             keys[0xD] = value
 
         case 0: // a
-            println("a")
+            print("a")
             keys[7] = value
 
         case 1: // s
-            println("s")
+            print("s")
             keys[8] = value
 
         case 2: // d
-            println("d")
+            print("d")
             keys[9] = value
             
         case 3: // f
-            println("f")
+            print("f")
             keys[0xE] = value
 
         case 6: // z
-            println("z")
+            print("z")
             keys[0xA] = value
 
         case 7: // x
-            println("x")
+            print("x")
             keys[0] = value
 
         case 8: // c
-            println("c")
+            print("c")
             keys[0xB] = value
             
         case 9: // v
-            println("v")
+            print("v")
             keys[0xF] = value
 
         default:
-            println("default")
+            print("default")
         }
     }
     
